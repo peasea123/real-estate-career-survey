@@ -4,16 +4,16 @@ import QR from "@/components/QR";
 
 export default function NextSteps() {
   return (
-    <section className="mt-10 border-t border-slate-300 pt-5 print:break-before-page">
-      <h2 className="text-xl font-semibold text-slate-900 print:text-black">
+    <section className="mt-10 border-t border-slate-300 dark:border-slate-700 pt-5 print:break-before-page">
+      <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100 print:text-black">
         Your Next Steps at MTSU
       </h2>
 
-      <p className="mt-2 text-sm text-slate-700 print:text-black">
+      <p className="mt-2 text-sm text-slate-700 dark:text-slate-300 print:text-black">
         Here are practical ways to explore—or begin—your real estate career path at MTSU:
       </p>
 
-      <ul className="mt-3 text-sm text-slate-700 space-y-2 print:text-black">
+      <ul className="mt-3 text-sm text-slate-700 dark:text-slate-300 space-y-2 print:text-black">
         <li>• Enroll in <strong>FIN 3030 – Real Estate Principles</strong></li>
         <li>• Join the <strong>MTSU Real Estate Club</strong> for events and networking</li>
         <li>• Attend the <strong>Real Estate Mini-Career Fair</strong></li>
@@ -33,7 +33,7 @@ export default function NextSteps() {
           <a
             href="https://www.mtsu.edu/programs/real-estate"
             target="_blank"
-            className="mt-1 text-xs text-sky-700 underline print:text-black"
+            className="mt-1 text-xs text-sky-700 dark:text-sky-400 underline print:text-black"
           >
             mtsu.edu/programs/real-estate
           </a>
@@ -48,7 +48,7 @@ export default function NextSteps() {
           <a
             href="https://www.mtsu.edu"
             target="_blank"
-            className="mt-1 text-xs text-sky-700 underline print:text-black"
+            className="mt-1 text-xs text-sky-700 dark:text-sky-400 underline print:text-black"
           >
             mtsu.edu
           </a>
@@ -63,7 +63,7 @@ export default function NextSteps() {
           <a
             href="https://www.mba.org/conferences-and-education/industry-careers/mortgage-banking-bound"
             target="_blank"
-            className="mt-1 text-xs text-sky-700 underline print:text-black"
+            className="mt-1 text-xs text-sky-700 dark:text-sky-400 underline print:text-black"
           >
             mba.org / Mortgage Banking Bound
           </a>
@@ -78,7 +78,7 @@ export default function NextSteps() {
           <a
             href="https://raiderrealtyllc.com/"
             target="_blank"
-            className="mt-1 text-xs text-sky-700 underline print:text-black"
+            className="mt-1 text-xs text-sky-700 dark:text-sky-400 underline print:text-black"
           >
             raiderrealtyllc.com
           </a>
@@ -93,7 +93,7 @@ export default function NextSteps() {
           <a
             href="https://www.linkedin.com/company/mtsu-real-estate-studies"
             target="_blank"
-            className="mt-1 text-xs text-sky-700 underline print:text-black"
+            className="mt-1 text-xs text-sky-700 dark:text-sky-400 underline print:text-black"
           >
             LinkedIn: MTSU Real Estate Studies
           </a>
