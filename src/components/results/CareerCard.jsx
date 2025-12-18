@@ -13,13 +13,14 @@ function Section({ title, content }) {
 
 function ListSection({ title, items, color }) {
   const colorClass = color === "emerald" ? "text-emerald-700" : "text-rose-700";
+  const bgClass = color === "emerald" ? "bg-emerald-50 border-emerald-200" : "bg-rose-50 border-rose-200";
 
   return (
-    <div className="print:break-inside-avoid">
+    <div className={`print:break-inside-avoid rounded-lg border p-3 ${bgClass}`}>
       <h4 className={`text-sm font-semibold ${colorClass} print:text-black`}>
         {title}
       </h4>
-      <ul className="mt-1 list-disc pl-5 text-sm text-slate-700 space-y-1 print:text-black">
+      <ul className="mt-2 list-disc pl-5 text-sm text-slate-700 space-y-1 print:text-black">
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
