@@ -3,14 +3,14 @@
 export default function LandingPage({ onStart }) {
   return (
     <main className="min-h-screen bg-slate-100 dark:bg-slate-900">
+      <div className="w-full bg-[#0066CC] py-6 px-6 flex items-center justify-center">
+        <img
+          src="https://mtsurealestate.com/images/Artboard%201.png"
+          alt="MTSU Logo"
+          className="h-16 w-auto object-contain"
+        />
+      </div>
       <div className="max-w-3xl mx-auto px-4 py-12 text-slate-800 dark:text-slate-200">
-        <div className="flex justify-center mb-8">
-          <img
-            src="https://mtsurealestate.com/images/Artboard%201.png"
-            alt="MTSU Logo"
-            className="h-16 w-auto object-contain"
-          />
-        </div>
         <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
           Discover Your Path in Real Estate
         </h1>
