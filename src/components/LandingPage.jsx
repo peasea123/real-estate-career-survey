@@ -2,24 +2,31 @@
 
 export default function LandingPage({ onStart }) {
   return (
-    <main className="min-h-screen bg-slate-100">
-      <div className="max-w-3xl mx-auto px-4 py-12 text-slate-800">
-        <h1 className="text-4xl font-bold text-slate-900 mb-4 text-center">
+    <main className="min-h-screen bg-slate-100 dark:bg-slate-900">
+      <div className="max-w-3xl mx-auto px-4 py-12 text-slate-800 dark:text-slate-200">
+        <div className="flex justify-center mb-8">
+          <img
+            src="https://mtsurealestate.com/images/Artboard%201.png"
+            alt="MTSU Logo"
+            className="h-16 w-auto object-contain"
+          />
+        </div>
+        <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
           Discover Your Path in Real Estate
         </h1>
 
-        <p className="text-lg text-slate-700 mb-4 text-center">
-          Most people only think of “real estate agents.”  
+        <p className="text-lg text-slate-700 dark:text-slate-300 mb-4 text-center">
+          Most people only think of "real estate agents."  
           In reality, the industry includes dozens of high-impact careers.
         </p>
 
-        <p className="mb-3 text-sm leading-relaxed">
+        <p className="mb-3 text-sm leading-relaxed dark:text-slate-300">
           This short interest survey is designed to help you see which parts of the
           real estate world might fit you best. Your answers will be compared to
           patterns we see in successful professionals across areas like:
         </p>
 
-        <ul className="mb-4 text-sm leading-relaxed list-disc pl-6">
+        <ul className="mb-4 text-sm leading-relaxed list-disc pl-6 dark:text-slate-300">
           <li>Residential and commercial sales &amp; brokerage</li>
           <li>Mortgage lending and banking</li>
           <li>Investment, private equity, and asset management</li>
@@ -35,7 +42,7 @@ export default function LandingPage({ onStart }) {
           can take at Middle Tennessee State University to explore them further.
         </p>
 
-        <p className="text-sm leading-relaxed text-slate-900 font-medium">
+        <p className="text-sm leading-relaxed text-slate-900 dark:text-slate-100 font-medium">
           This isn’t a test and there are no wrong answers. It’s a conversation
           starter to help you think more strategically about your future.
         </p>

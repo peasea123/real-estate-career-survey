@@ -41,7 +41,7 @@ export default function ResultsPanel({
   return (
     <section
       id="career-report"
-      className="mt-10 rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm 
+      className="mt-10 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70 p-6 shadow-sm 
                  print:border-none print:shadow-none print:p-4"
     >
       {/* Top blue logo bar */}
@@ -61,7 +61,7 @@ export default function ResultsPanel({
         </button>
 
         {copied && (
-          <span className="ml-3 text-xs text-emerald-600 font-medium">
+          <span className="ml-3 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
             Link copied ✓
           </span>
         )}

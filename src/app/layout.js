@@ -22,7 +22,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <script suppressHydrationWarning>
+        {`
+          if (localStorage.getItem('theme') === 'dark' || 
+              (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        `}
+      </script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

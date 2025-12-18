@@ -152,7 +152,7 @@ export default function Home() {
   /* SURVEY + RESULTS LAYOUT                                    */
   /* ---------------------------------------------------------- */
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main className="min-h-screen bg-slate-100 dark:bg-slate-950">
       {/* Branded header only when filling out survey */}
       {!results && <SurveyHeader />}
 
@@ -161,21 +161,21 @@ export default function Home() {
         {!results && (
           <>
             <header className="mb-8">
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
                 Real Estate Career Interest Survey
               </h1>
 
-              <p className="mt-2 max-w-2xl text-sm text-slate-700">
+              <p className="mt-2 max-w-2xl text-sm text-slate-700 dark:text-slate-400">
                 Your answers will help match your interests with several possible
                 real estate career paths.
               </p>
             </header>
 
-            <section className="rounded-2xl bg-white/80 p-6 shadow-sm border border-slate-200">
+            <section className="rounded-2xl bg-white/80 dark:bg-slate-800/80 p-6 shadow-sm border border-slate-200 dark:border-slate-700">
               <form onSubmit={handleSubmit}>
                 {/* NAME FIELD */}
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-slate-800 mb-1">
+                  <label className="block text-sm font-medium text-slate-800 dark:text-slate-200 mb-1">
                     Your Name (required)
                   </label>
                   <input
@@ -183,8 +183,8 @@ export default function Home() {
                     value={studentName}
                     onChange={(e) => setStudentName(e.target.value)}
                     placeholder="Enter your full name"
-                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm shadow-sm 
-                               focus:border-sky-500 focus:ring-sky-500"
+                    className="w-full rounded-lg border border-slate-300 dark:border-slate-600 px-3 py-2 text-sm shadow-sm 
+                               focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-slate-700 dark:text-slate-100"
                     required
                   />
                 </div>
@@ -194,10 +194,10 @@ export default function Home() {
                   {QUESTIONS.map((q, index) => (
                     <li
                       key={q.id}
-                      className="rounded-xl border border-slate-100 bg-slate-50/60 p-4"
+                      className="rounded-xl border border-slate-100 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-700/40 p-4"
                     >
-                      <p className="text-sm font-medium text-slate-900 mb-3">
-                        <span className="mr-2 text-slate-500">{index + 1}.</span>
+                      <p className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-3">
+                        <span className="mr-2 text-slate-500 dark:text-slate-400">{index + 1}.</span>
                         {q.text}
                       </p>
 
@@ -206,11 +206,11 @@ export default function Home() {
                           <label
                             key={opt.id}
                             className={`flex cursor-pointer items-start gap-2 rounded-lg border p-2 text-sm 
-                                        transition hover:border-sky-300 hover:bg-white
+                                        transition hover:border-sky-300 hover:bg-white dark:hover:bg-slate-600
                                         ${
                                           answers[q.id] === opt.category
-                                            ? "border-sky-500 bg-white shadow-xs animate-popSelect"
-                                            : "border-slate-200"
+                                            ? "border-sky-500 bg-white dark:bg-slate-700 shadow-xs animate-popSelect"
+                                            : "border-slate-200 dark:border-slate-600"
                                         }`}
                           >
                             <input
@@ -222,7 +222,7 @@ export default function Home() {
                               className="mt-1 h-4 w-4 cursor-pointer accent-sky-600"
                             />
 
-                            <span className="text-slate-800">{opt.label}</span>
+                            <span className="text-slate-800 dark:text-slate-100">{opt.label}</span>
                           </label>
                         ))}
                       </div>
@@ -232,7 +232,7 @@ export default function Home() {
 
                 {/* AUTOSAVE MESSAGE */}
                 {saveStatus === "saved" && (
-                  <div className="text-xs text-emerald-600 font-medium mb-2 animate-fade">
+                  <div className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mb-2 animate-fade">
                     Progress saved ✓
                   </div>
                 )}
@@ -245,7 +245,7 @@ export default function Home() {
                       ${
                         allAnswered
                           ? "bg-sky-600 text-white hover:bg-sky-700"
-                          : "bg-slate-300 text-slate-600 cursor-not-allowed"
+                          : "bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-slate-400 cursor-not-allowed"
                       }`}
                   >
                     See My Suggested Career Paths
@@ -263,8 +263,8 @@ export default function Home() {
             {!isSharedView && (
               <button
                 onClick={() => setResults(null)}
-                className="mb-4 inline-flex items-center rounded-full bg-slate-200 px-4 py-1 
-                           text-xs font-medium text-slate-700 hover:bg-slate-300 print:hidden"
+                className="mb-4 inline-flex items-center rounded-full bg-slate-200 dark:bg-slate-700 px-4 py-1 
+                           text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600 print:hidden"
               >
                 ← Back to my answers
               </button>
