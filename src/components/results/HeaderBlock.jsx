@@ -2,12 +2,13 @@
 
 export default function HeaderBlock({ studentName, isSharedView }) {
   return (
-    <header className="mb-10 mt-6 print:my-4 text-slate-900">
-      <h1 className="text-4xl font-bold leading-tight text-slate-900 print:text-black text-center mb-6">
-        Real Estate Career Exploration Report
-      </h1>
+    <header className="mb-10 mt-6 print:my-4">
+      <div className="bg-white rounded-lg p-8 shadow-sm">
+        <h1 className="text-4xl font-bold leading-tight text-slate-900 print:text-black text-center mb-6">
+          Real Estate Career Exploration Report
+        </h1>
 
-      <p className="mt-2 text-sm text-center text-slate-700 print:text-black">
+        <p className="mt-2 text-sm text-center text-slate-700 print:text-black">
         Prepared for{" "}
         <span className="font-semibold text-slate-900 print:text-black">
           {isSharedView ? "a prospective student" : studentName}
@@ -58,6 +59,7 @@ export default function HeaderBlock({ studentName, isSharedView }) {
           — Dr. Philip Seagraves <br />
           Professor &amp; Director, MTSU Real Estate Studies Program
         </p>
+      </div>
       </div>
     </header>
   );
