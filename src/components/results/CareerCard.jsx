@@ -4,7 +4,7 @@ function Section({ title, content }) {
   return (
     <section className="mt-3 print:break-inside-avoid">
       <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 print:text-black">{title}</h4>
-      <p className="mt-1 text-sm text-slate-700 dark:text-slate-300 print:text-black whitespace-pre-line break-words">
+      <p className="mt-1 text-sm text-slate-700 dark:text-slate-300 print:text-black break-words">
         {content}
       </p>
     </section>
